@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-10 10:19-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: report_builder/templates/admin/report_builder/report/change_form.html:6
+#: report_builder/templates/admin/report_builder/report/change_form.html:9
+msgid "Save and Start Building Report"
+msgstr ""
+
+#: report_builder/templates/admin/report_builder/report/change_list.html:5
+msgid ""
+"Need a report? Here is where you can download and create custom reports "
+"based on current information."
+msgstr ""
+
+#: report_builder/templates/admin/report_builder/report/change_list.html:11
+msgid "Manage all Reports"
+msgstr ""
+
+#: report_builder/templates/admin/report_builder/report/change_list.html:13
+msgid "View Starred Reports"
+msgstr "Yeah"
+
+#: report_builder/templates/report_builder/export_to_report.html:7
+msgid ""
+"Select the report you wish to use. Report filters will be ignored and only "
+"your checked off items will be reported."
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:10
+msgid "Create and manage reports"
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:10
+msgid "here"
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:13
+#, python-format
+msgid ""
+"\n"
+"    You have selected %(number_objects)s %(model)s record%(plur)s. Click <a "
+"href=\"%(admin_url)s\">here to go back</a>.\n"
+"    "
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:17
+msgid "Reports"
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:21
+msgid "Name"
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:22
+msgid "Description"
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:23
+msgid "Created"
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:24
+msgid "Modified"
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:25
+msgid "Select and Download"
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:38
+#, python-format
+msgid ""
+"\n"
+"            %(created)s by %(user)s\n"
+"            "
+msgstr ""
+
+#: report_builder/templates/report_builder/export_to_report.html:43
+#, python-format
+msgid ""
+"\n"
+"            %(modified)s by %(user)s\n"
+"            "
+msgstr ""
