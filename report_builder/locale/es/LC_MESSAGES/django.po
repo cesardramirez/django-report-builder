@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-11 10:39-0500\n"
+"POT-Creation-Date: 2017-04-11 12:30-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr "Estrellas"
 msgid "Starred"
 msgstr "Estrellas"
 
-#: report_builder/models.py:72
+#: report_builder/models.py:72 report_builder/models.py:430
 msgid "name"
 msgstr "nombre"
 
@@ -86,6 +86,22 @@ msgstr "Descargar"
 #: report_builder/models.py:415
 msgid "Copy"
 msgstr "Copiar"
+
+#: report_builder/models.py:431
+msgid "string"
+msgstr "cadena"
+
+#: report_builder/models.py:433
+msgid "Python string format. Ex ${} would place a $ in front of the result."
+msgstr "Formato de cadena de Python. Ex ${} colocaría un $ delante del resultado."
+
+#: report_builder/models.py:437
+msgid "format"
+msgstr "formato"
+
+#: report_builder/models.py:438
+msgid "formats"
+msgstr "formatos"
 
 #: report_builder/templates/admin/report_builder/report/change_form.html:6
 #: report_builder/templates/admin/report_builder/report/change_form.html:9

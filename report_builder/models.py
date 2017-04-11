@@ -427,11 +427,15 @@ class Report(models.Model):
 class Format(models.Model):
     """ A specifies a Python string format for e.g. `DisplayField`s.
     """
-    name = models.CharField(max_length=50, blank=True, default='')
-    string = models.CharField(
+    name = models.CharField(_('name'), max_length=50, blank=True, default='')
+    string = models.CharField(_('string'),
         max_length=300, blank=True, default='',
-        help_text='Python string format. Ex ${} would place a $ in front of the result.'
+        help_text=_('Python string format. Ex ${} would place a $ in front of the result.')
     )
+
+    class Meta:
+        verbose_name = _('format')
+        verbose_name_plural = _('formats')
 
     def __unicode__(self):
         return self.name
