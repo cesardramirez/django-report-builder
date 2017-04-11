@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-11 12:30-0500\n"
+"POT-Creation-Date: 2017-04-11 13:09-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,6 +31,11 @@ msgstr "Estrellas"
 #: report_builder/admin.py:70
 msgid "Starred"
 msgstr "Estrellas"
+
+#: report_builder/apps.py:6
+#: report_builder/templates/report_builder/export_to_report.html:17
+msgid "Reports"
+msgstr "Reportes"
 
 #: report_builder/models.py:72 report_builder/models.py:430
 msgid "name"
@@ -93,7 +98,8 @@ msgstr "cadena"
 
 #: report_builder/models.py:433
 msgid "Python string format. Ex ${} would place a $ in front of the result."
-msgstr "Formato de cadena de Python. Ex ${} colocaría un $ delante del resultado."
+msgstr ""
+"Formato de cadena de Python. Ex ${} colocaría un $ delante del resultado."
 
 #: report_builder/models.py:437
 msgid "format"
@@ -148,10 +154,6 @@ msgid ""
 "href=\"%(admin_url)s\">here to go back</a>.\n"
 "    "
 msgstr ""
-
-#: report_builder/templates/report_builder/export_to_report.html:17
-msgid "Reports"
-msgstr "Reportes"
 
 #: report_builder/templates/report_builder/export_to_report.html:21
 msgid "Name"
