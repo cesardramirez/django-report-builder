@@ -19,6 +19,8 @@ import time
 import datetime
 import re
 
+from django.utils.translation import ugettext as _
+
 AUTH_USER_MODEL = getattr(settings, 'AUTH_USER_MODEL', 'auth.User')
 
 
@@ -67,15 +69,15 @@ class Report(models.Model):
     def allowed_models():
         return get_allowed_models()
 
-    name = models.CharField(max_length=255)
-    slug = models.SlugField(verbose_name="Short Name")
-    description = models.TextField(blank=True)
+    name = models.CharField(_('name'), max_length=255)
+    slug = models.SlugField(verbose_name=_("short name"))
+    description = models.TextField(_('description'), blank=True)
     root_model = models.ForeignKey(
-        ContentType, limit_choices_to=get_limit_choices_to_callable)
-    created = models.DateField(auto_now_add=True)
-    modified = models.DateField(auto_now=True)
+        ContentType, limit_choices_to=get_limit_choices_to_callable, verbose_name=_("root model"))
+    created = models.DateField(_('created'), auto_now_add=True)
+    modified = models.DateField(_('modified'), auto_now=True)
     user_created = models.ForeignKey(
-        AUTH_USER_MODEL, editable=False, blank=True, null=True)
+        AUTH_USER_MODEL, editable=False, blank=True, null=True, verbose_name=_("user created"))
     user_modified = models.ForeignKey(
         AUTH_USER_MODEL, editable=False, blank=True, null=True,
         related_name="report_modified_set")
@@ -86,6 +88,10 @@ class Report(models.Model):
         AUTH_USER_MODEL, blank=True,
         help_text="These users have starred this report for easy reference.",
         related_name="report_starred_set")
+
+    class Meta:
+        verbose_name = _('report')
+        verbose_name_plural = _('reports')
 
     def save(self, *args, **kwargs):
         if not self.id:
@@ -380,6 +386,7 @@ class Report(models.Model):
                 getattr(settings, 'STATIC_URL', '/static/')
             )
         )
+    edit.short_description = _("Edit")
     edit.allow_tags = True
 
     def download_xlsx(self):
@@ -397,7 +404,7 @@ class Report(models.Model):
                     getattr(settings, 'STATIC_URL', '/static/'),
                 )
             )
-    download_xlsx.short_description = "Download"
+    download_xlsx.short_description = _("Download")
     download_xlsx.allow_tags = True
 
     def copy_report(self):
@@ -405,7 +412,7 @@ class Report(models.Model):
             reverse('report_builder_create_copy', args=[self.id]),
             getattr(settings, 'STATIC_URL', '/static/'),
         )
-    copy_report.short_description = "Copy"
+    copy_report.short_description = _("Copy")
     copy_report.allow_tags = True
 
     def check_report_display_field_positions(self):

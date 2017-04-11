@@ -6,12 +6,14 @@ from django.http import HttpResponseRedirect
 from report_builder.models import Report, Format
 from django.conf import settings
 
+from django.utils.translation import ugettext as _
+
 static_url = getattr(settings, 'STATIC_URL', '/static/')
 
 
 class StarredFilter(SimpleListFilter):
-    title = 'Your starred reports'
-    parameter_name = 'starred'
+    title = _('Your starred reports')
+    parameter_name = _('starred')
 
     def lookups(self, request, model_admin):
         return (
@@ -65,7 +67,7 @@ class ReportAdmin(admin.ModelAdmin):
             reverse('ajax_add_star', args=[obj.id]),
             img)
     ajax_starred.allow_tags = True
-    ajax_starred.short_description = "Starred"
+    ajax_starred.short_description = _("Starred")
 
     def save_model(self, request, obj, form, change):
         star_user = False

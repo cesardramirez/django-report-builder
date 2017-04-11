@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-10 10:19-0500\n"
+"POT-Creation-Date: 2017-04-10 20:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,38 +17,112 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: report_builder/admin.py:15
+msgid "Your starred reports"
+msgstr "Sus reportes con estrellas"
+
+#: report_builder/admin.py:16
+#, fuzzy
+#| msgid "Starred"
+msgid "starred"
+msgstr "Estrellas"
+
+#: report_builder/admin.py:70
+msgid "Starred"
+msgstr "Estrellas"
+
+#: report_builder/models.py:72
+msgid "name"
+msgstr "nombre"
+
+#: report_builder/models.py:73
+msgid "short name"
+msgstr "nombre corto"
+
+#: report_builder/models.py:74
+#, fuzzy
+#| msgid "Description"
+msgid "description"
+msgstr "Descripción"
+
+#: report_builder/models.py:76
+msgid "root model"
+msgstr "modelo raíz"
+
+#: report_builder/models.py:77
+#, fuzzy
+#| msgid "Created"
+msgid "created"
+msgstr "creado"
+
+#: report_builder/models.py:78
+#, fuzzy
+#| msgid "Modified"
+msgid "modified"
+msgstr "modificado"
+
+#: report_builder/models.py:80
+msgid "user created"
+msgstr "usuario creado"
+
+#: report_builder/models.py:93
+msgid "report"
+msgstr "reporte"
+
+#: report_builder/models.py:94
+msgid "reports"
+msgstr "reportes"
+
+# Aditional
+#: report_builder/models.py:389
+msgid "Edit"
+msgstr "Editar"
+
+#: report_builder/models.py:407
+msgid "Download"
+msgstr "Descargar"
+
+#: report_builder/models.py:415
+msgid "Copy"
+msgstr "Copiar"
+
 #: report_builder/templates/admin/report_builder/report/change_form.html:6
 #: report_builder/templates/admin/report_builder/report/change_form.html:9
 msgid "Save and Start Building Report"
-msgstr ""
+msgstr "Guardar e Iniciar el Reporte Construido"
 
 #: report_builder/templates/admin/report_builder/report/change_list.html:5
 msgid ""
 "Need a report? Here is where you can download and create custom reports "
 "based on current information."
 msgstr ""
+"¿Necesita un reporte? Aquí es donde puede descargar y crear reportes "
+"personalizados basados en la información actual."
 
 #: report_builder/templates/admin/report_builder/report/change_list.html:11
 msgid "Manage all Reports"
-msgstr ""
+msgstr "Administrar todos los Reportes"
 
 #: report_builder/templates/admin/report_builder/report/change_list.html:13
 msgid "View Starred Reports"
-msgstr "Yeah"
+msgstr "Ver los Reportes con Estrellas"
 
 #: report_builder/templates/report_builder/export_to_report.html:7
 msgid ""
 "Select the report you wish to use. Report filters will be ignored and only "
 "your checked off items will be reported."
 msgstr ""
+"Seleccione el reporte que desea utilizar. Los filtros de los reportes se "
+"ignorarán y solo se notificarán los elementos marcados."
 
 #: report_builder/templates/report_builder/export_to_report.html:10
 msgid "Create and manage reports"
-msgstr ""
+msgstr "Crear y administrar reportes"
 
 #: report_builder/templates/report_builder/export_to_report.html:10
 msgid "here"
-msgstr ""
+msgstr "aquí"
 
 #: report_builder/templates/report_builder/export_to_report.html:13
 #, python-format
@@ -61,27 +135,27 @@ msgstr ""
 
 #: report_builder/templates/report_builder/export_to_report.html:17
 msgid "Reports"
-msgstr ""
+msgstr "Reportes"
 
 #: report_builder/templates/report_builder/export_to_report.html:21
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: report_builder/templates/report_builder/export_to_report.html:22
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: report_builder/templates/report_builder/export_to_report.html:23
 msgid "Created"
-msgstr ""
+msgstr "Creado"
 
 #: report_builder/templates/report_builder/export_to_report.html:24
 msgid "Modified"
-msgstr ""
+msgstr "Modificado"
 
 #: report_builder/templates/report_builder/export_to_report.html:25
 msgid "Select and Download"
-msgstr ""
+msgstr "Seleccionar y Descargar"
 
 #: report_builder/templates/report_builder/export_to_report.html:38
 #, python-format
