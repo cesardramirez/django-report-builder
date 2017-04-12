@@ -2,10 +2,10 @@
   <div style="overflow-y: auto; height:45%">
     <md-toolbar>
       <div class="md-toolbar-tools">
-          <span class="caps">{{ report.root_model_name }} Relations</span>
+          <span class="caps">{{ report.root_model_name }} Relaciones</span>
       </div>
     </md-toolbar>  
-    <input placeholder="Search Relations" style="width: 100%" ng-model="searchRelations"></input>
+    <input placeholder="Buscar Relaciones" style="width: 100%" ng-model="searchRelations"></input>
     <md-content>
       <div ui-tree data-drag-enabled="false">
       <ol ui-tree-nodes="" ng-model="related_fields">
@@ -19,10 +19,10 @@
   <div style="overflow-y: auto; height:45%">
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <span class="caps">{{ fields_header }} Fields</span>
+        <span class="caps">{{ fields_header }} Campos</span>
       </div>
     </md-toolbar>  
-    <input placeholder="Search Fields" style="width: 100%" ng-model="searchFields"></input>
+    <input placeholder="Buscar Campos" style="width: 100%" ng-model="searchFields"></input>
     <md-content>
       <div ui-tree data-drag-enabled="false">
       <ol ui-tree-nodes="" ng-model="fields">
@@ -32,7 +32,7 @@
               {{field.field_verbose}}
             </div>
             <div flex="10" style="min-width: 37px;">
-              <md-button class="add_button" ng-click="add_field(field)"> Add </md-button>
+              <md-button class="add_button" ng-click="add_field(field)"> Añadir </md-button>
             </div>
           </div>
         </li>

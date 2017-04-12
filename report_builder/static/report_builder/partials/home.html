@@ -3,29 +3,29 @@
     <md-sidenav class="fullheight md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-lg')">
       <md-content style="height: 100%; overflow-y: auto;">
         <md-toolbar md-scroll-shrink>
-          <h1 class="md-toolbar-tools">Reports</h1>
+          <h1 class="md-toolbar-tools">Reportes</h1>
         </md-toolbar>
         <md-content ng-controller="LeftCtrl">
           <md-button layout-fill href="{{BASE_URL + 'report/add/'}}" class="sidenav-report-link md-accent">
             <div layout="column" layout-align="center center">
-              <div>+ Add Report</div>
+              <div>+ Agregar Reporte</div>
             </div>
           </md-button>
 
 
-          <div>Sort By:</div>
+          <div>Ordenar por:</div>
           <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-            <md-button class="md-primary sort-button" ng-click="reverseReportOrder = !reverseReportOrder; reportOrder='name';">name</md-button>
-            <md-button class="md-primary sort-button" ng-click="reverseReportOrder = !reverseReportOrder; reportOrder='modified';">date</md-button>
-            <md-button class="md-primary sort-button" ng-click="reverseReportOrder = !reverseReportOrder; reportOrder='user_created.first_name';">user</md-button>
+            <md-button class="md-primary sort-button" ng-click="reverseReportOrder = !reverseReportOrder; reportOrder='name';">nombre</md-button>
+            <md-button class="md-primary sort-button" ng-click="reverseReportOrder = !reverseReportOrder; reportOrder='modified';">fecha</md-button>
+            <md-button class="md-primary sort-button" ng-click="reverseReportOrder = !reverseReportOrder; reportOrder='user_created.first_name';">usuario</md-button>
           </section>
 
           <md-input-container class="sidebar-left-search">
-            <label>Search Reports</label>
+            <label>Buscar Reportes</label>
             <input type="text" ng-model="searchReports">
           </md-input-container>
 
-          <h5>My Reports</h5>
+          <h5>Mis Reportes</h5>
 
           <md-list>
             <md-item ng-repeat="report in reports | filter:searchReports | filter:currentUserFilter | orderBy:reportOrder:reverseReportOrder">
@@ -49,7 +49,7 @@
             </md-item>
           </md-list>
 
-          <h5>All Reports</h5>
+          <h5>Todos los Reportes</h5>
           <md-list>
             <md-item ng-repeat="report in reports | filter:searchReports | filter:notCurrentUserFilter | orderBy:reportOrder:reverseReportOrder">
               <md-item-content>
@@ -79,28 +79,28 @@
       <md-toolbar class="md-theme-indigo">
         <h1 class="md-toolbar-tools">
         <md-input-container>
-          <label>Name</label>
+          <label>Nombre</label>
           <input ng-model="report.name" class="long"></input>
         </md-input-container>
           <span flex=""></span>
-          <span>Last Updated: {{ report.modified }}</span>
+          <span>Última Actualización: {{ report.modified }}</span>
         </h1>
       </md-toolbar>
       <md-content class="report-tabs-height">
         <md-tabs class="report-tabs-height" md-selected="selectedIndex">
           <md-tab id="tab1" aria-controls="tab1-content">
-            <md-tab-label>Display</md-tab-label>
+            <md-tab-label>Mostrar</md-tab-label>
             <md-tab-body>
               <div ui-tree="" ng-controller="ReportDisplayCtrl">
                 <div layout="row">
                   <div class="move_trash" flex=""></div>
-                  <div flex="">Field</div>
-                  <div flex="">Name</div>
-                  <div class="col_sort" flex="">Sort Desc?</div>
-                  <div class="col_aggregate" flex="">Aggregate</div>
-                  <div class="col_format" flex="">Format</div>
+                  <div flex="">Campo</div>
+                  <div flex="">Nombre</div>
+                  <div class="col_sort" flex="">Ordenar Desc?</div>
+                  <div class="col_aggregate" flex="">Agregar</div>
+                  <div class="col_format" flex="">Formato</div>
                   <div class="col_checkbox" flex="">Total</div>
-                  <div class="col_checkbox" flex="">Group</div>
+                  <div class="col_checkbox" flex="">Agrupar</div>
                 </div>
                 <div>
                   <ol ui-tree-nodes="" ng-model="report.displayfield_set">
@@ -112,25 +112,25 @@
               </div>
               <div hide-gt-lg layout="row" layout-sm="column" layout-align="center center" style="height: 55px;">
                 <md-button class="fullscreen" ng-click="requestFullscreen()" aria-label="Fullscreen">
-                  Fullscreen
+                  Pantalla completa
                 </md-button>
               </div>
             </md-tab-body>
           </md-tab>
           <md-tab id="tab2" aria-controls="tab2-content">
-            <md-tab-label>Filter</md-tab-label>
+            <md-tab-label>Filtrar</md-tab-label>
             <md-tab-body>
               <div ng-include="static('report_builder/partials/filters.html')"></div>
             </md-tab-body>
           </md-tab>
           <md-tab id="tab3" aria-controls="tab3-content">
-            <md-tab-label>Report</md-tab-label>
+            <md-tab-label>Reporte</md-tab-label>
             <md-tab-body>
               <div class="fullheight" ng-include="static('report_builder/partials/show_report.html')"></div>
             </md-tab-body>
           </md-tab>
           <md-tab id="tab4" aria-controls="tab3-content">
-            <md-tab-label>Options</md-tab-label>
+            <md-tab-label>Opciones</md-tab-label>
             <md-tab-body>
               <div ng-include="static('report_builder/partials/options.html')"></div>
             </md-tab-body>

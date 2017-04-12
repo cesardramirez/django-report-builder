@@ -71,9 +71,9 @@ reportBuilderApp.controller('homeCtrl', function($scope, $routeParams, $location
       $scope.related_fields = [root_related_field]
       reportService.getRelatedFields(data).then(function(result) {
         root_related_field.related_fields = result;
-        var help_text = 'This model is included in report builder.';
+        var help_text = 'Este modelo se incluye en el generador de reportes.';
         if (result[0].included_model == false) {
-          help_text = 'This model is not included in report builder.';
+          help_text = 'Este modelo no se incluye en el generador de reportes.';
         }
         $scope.help_text = help_text;
       });
@@ -194,9 +194,9 @@ reportBuilderApp.controller('FieldsCtrl', function($scope, $mdSidenav, reportSer
     });
     reportService.getRelatedFields(data).then(function(result) {
       field.related_fields = result;
-      var help_text = 'This model is included in report builder.';
+      var help_text = 'Este modelo se incluye en el generador de reportes.';
       if (result[0].included_model == false) {
-        help_text = 'This model is not included in report builder.';
+        help_text = 'Este modelo no se incluye en el generador de reportes.';
       }
       $scope.help_text = help_text;
     });
@@ -276,7 +276,7 @@ reportBuilderApp.controller('ReportShowCtrl', function($scope, $window, $http, $
       $scope.reportData.refresh = false;
     }, function(response) {
       $scope.reportData.refresh = false;
-      $scope.reportData.statusMessage = "Error with status code " + response.status;
+      $scope.reportData.statusMessage = "Error con el status code " + response.status;
     });
   };
 
@@ -295,12 +295,12 @@ reportBuilderApp.controller('ReportShowCtrl', function($scope, $window, $http, $
       $scope.reportData.reportErrors = null;
       $mdToast.show(
         $mdToast.simple()
-        .content('Report Saved!')
+        .content('Reporte Guardado!')
         .hideDelay(1000));
     }, function(response) {
       $mdToast.show(
         $mdToast.simple()
-        .content('Unable to Save!')
+        .content('No se pudo Guardar!')
         .hideDelay(1000));
       $scope.reportData.reportErrors = response.data;
     });
@@ -309,11 +309,11 @@ reportBuilderApp.controller('ReportShowCtrl', function($scope, $window, $http, $
   $scope.downloadReport = function(filetype) {
     base_url = BASE_URL + 'report/' + $scope.report.id
     url = base_url + '/download_file/' + filetype + '/';
-    $scope.workerStatus = 'Requesting report';
+    $scope.workerStatus = 'Solicitud de reporte';
     if (ASYNC_REPORT === "True") {
       $http.get(url).
       success(function(data) {
-        $scope.workerStatus = 'Report Requested';
+        $scope.workerStatus = 'Reporte Solicitado';
         var attempts = 0;
         var task_id = data.task_id;
         var checkPoller = function() {
@@ -324,10 +324,10 @@ reportBuilderApp.controller('ReportShowCtrl', function($scope, $window, $http, $
               $window.location.href = check_data.link;
               $mdToast.show(
                 $mdToast.simple()
-                .content('Report Ready!')
+                .content('Reporte Listo!')
                 .hideDelay(4000));
             } else {
-              $scope.workerStatus = 'Waiting on worker. State is ' + check_data.state;
+              $scope.workerStatus = 'Esperando al worker. El estado es ' + check_data.state;
               $scope.workerState = check_data.state;
               attempts += 1;
               if (check_data.state !== "FAILURE") {

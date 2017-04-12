@@ -3,23 +3,23 @@
     <md-card>
       <md-toolbar>
         <h2 class="md-toolbar-tools">
-          <span>Add New Report {{ report.name }}</span>
+          <span>Agregar Nuevo Reporte {{ report.name }}</span>
         </h2>
       </md-toolbar>
       <form style="padding: 20px;" name="reportForm" ng-submit="submitForm()">
         <md-input-container>
-          <label>Report Name</label>
+          <label>Nombre del Reporte</label>
           <input required="required" name="name" ng-model="report.name"></input>
         </md-input-container>
         <md-input-container flex>
-            <label>Description</label>
+            <label>Descripción</label>
             <textarea ng-model="report.description"></textarea>
         </md-input-container>
-        <label for="root_model">Root Model</label>
+        <label for="root_model">Modelo Raíz</label>
         <select id="root_model" required="required" ng-model="report.root_model" ng-options="item.pk as item.name for item in contentTypes | orderBy:'name'">
         </select>
-        <p>The "root model" will be the starting point for this report. In database terms this is the FROM table that others will be joined with. A spreadsheet approximation would a pivot table.</p>
-        <md-button type="submit" class="md-raised md-primary">Create Report</md-button>
+        <p>El "modelo raíz" será el punto de partida para este reporte. En términos de base de datos, esta es la tabla FROM a la que otras se unirán. Una aproximación de una hoja de cálculo sería una tabla dinámica.</p>
+        <md-button type="submit" class="md-raised md-primary">Crear Reporte</md-button>
       </form>
     </md-card>
   </md-content>

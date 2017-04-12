@@ -3,7 +3,7 @@
     <md-list-item>
         <md-item-content>
             <md-input-container flex>
-                <label>Description</label>
+                <label>Descripción</label>
                 <textarea ng-model="report.description"></textarea>
             </md-input-container>
         </md-item-content>
@@ -11,29 +11,29 @@
     <md-list-item>
         <md-item-content>
             <md-checkbox ng-model="report.distinct" aria-label="Is Distinct">
-                Is Distinct (Maybe help reduce duplicates rows) 
+                Es Distinct (Quizás ayuda a reducir las filas duplicadas)
             </md-checkbox>
-            Read&nbsp;<a href="//docs.djangoproject.com/en/1.7/ref/models/querysets/#django.db.models.query.QuerySet.distinct">more.</a>
+            Leer&nbsp;<a href="//docs.djangoproject.com/en/1.7/ref/models/querysets/#django.db.models.query.QuerySet.distinct">más.</a>
         </md-item-content>
     </md-list-item>
     <md-list-item>
         <md-item-content>
-            <a ng-href="{{ 'report/' + report.id + '/create_copy/' }}" target="_self"><img class="options-icon" src="{{ static('report_builder/img/new/copy.svg') }}"/>Copy this report</a>
+            <a ng-href="{{ 'report/' + report.id + '/create_copy/' }}" target="_self"><img class="options-icon" src="{{ static('report_builder/img/new/copy.svg') }}"/>Copiar este reporte</a>
         </md-item-content>
     </md-list-item>
     <md-list-item>
         <md-item-content>
             <a href="" ng-click="deleteReport(report.id)">
-                <img class="options-icon" src="{{ static('report_builder/img/new/delete.svg') }}"/>Delete this report
+                <img class="options-icon" src="{{ static('report_builder/img/new/delete.svg') }}"/>Eliminar este reporte
             </a>
         </md-item-content>
     </md-list-item>
     <md-list-item ng-if="ASYNC_REPORT === 'True'">
         <md-item-content>
             <a ng-href="{{ report.report_file }}">
-                <img class="options-icon" src="{{ static('report_builder/img/new/download.svg') }}"/>Download existing report 
+                <img class="options-icon" src="{{ static('report_builder/img/new/download.svg') }}"/>Descargar el reporte existente
             </a>
-            &nbsp;generated at {{ report.report_file_creation | date:"MM/dd/yyyy 'at' h:mma" }}
+            &nbsp;generado en {{ report.report_file_creation | date:"MM/dd/yyyy 'at' h:mma" }}
         </md-item-content>
     </md-list-item>
 </md-list>
